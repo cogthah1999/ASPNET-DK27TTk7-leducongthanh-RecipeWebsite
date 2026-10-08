@@ -1,0 +1,223 @@
+@model RecipeWebsite.ViewModels.RecipeCreateViewModel
+
+@{
+    ViewData["Title"] = "Thêm công thức";
+}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">Thêm công thức mới</h1>
+
+    <form asp-action="Create" method="post">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="text-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <div>@error.ErrorMessage</div>
+            }
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">
+                Tên món
+            </label>
+
+            <input asp-for="Recipe.Title" class="form-control" />
+            <span asp-validation-for="Recipe.Title" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">
+                Mô tả
+            </label>
+
+            <textarea asp-for="Recipe.Description" class="form-control" rows="3"></textarea>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">
+                Thời gian nấu (phút)
+            </label>
+
+            <input asp-for="Recipe.CookingTime" type="number" class="form-control" />
+            <span asp-validation-for="Recipe.CookingTime" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">
+                Khẩu phần
+            </label>
+
+            <input asp-for="Recipe.Servings" type="number" class="form-control" />
+            <span asp-validation-for="Recipe.Servings" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Danh mục
+            </label>
+
+            <select asp-for="Recipe.CategoryId" class="form-select">
+
+                <option value="">
+                    -- Chọn danh mục --
+                </option>
+
+                @foreach (var category in Model.Categories)
+                {
+                    <option value="@category.Id">
+                        @category.Name
+                    </option>
+                }
+
+                <option value="999">
+                    TEST - Category không tồn tại
+                </option>
+
+            </select>
+            <span asp-validation-for="Recipe.CategoryId" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+
+            <label class="form-label fw-bold">
+                Nguyên liệu
+            </label>
+
+            <div id="ingredient-container">
+
+                <div class="ingredient-row mb-3">
+
+                    <div class="row g-2">
+
+                        <div class="col-md-5">
+                            <select name="RecipeIngredients[0].IngredientId" class="form-select">
+
+                                <option value="">
+                                    -- Chọn nguyên liệu --
+                                </option>
+
+                                @foreach (var ingredient in Model.Ingredients)
+                                {
+                                    <option value="@ingredient.Id">
+                                        @ingredient.Name
+                                    </option>
+                                }
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <input name="RecipeIngredients[0].Quantity" type="number" step="0.01" class="form-control"
+                                   placeholder="Số lượng" />
+                        </div>
+
+                        <div class="col-md-3">
+                            <input name="RecipeIngredients[0].Unit" class="form-control" placeholder="Đơn vị" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button type="button" id="add-ingredient" class="btn btn-outline-primary">
+                + Thêm nguyên liệu
+            </button>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Hình ảnh
+            </label>
+
+            <input asp-for="Recipe.ImageUrl" class="form-control" />
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">
+                Hướng dẫn nấu
+            </label>
+
+            <textarea asp-for="Recipe.Instructions" class="form-control" rows="6"></textarea>
+            <span asp-validation-for="Recipe.Instructions" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">
+            Thêm công thức
+        </button>
+
+        <a href="/Recipe" class="btn btn-secondary">
+            Hủy
+        </a>
+
+    </form>
+    <script>
+            let ingredientIndex = 1;
+
+            document.getElementById("add-ingredient").addEventListener("click", function () {
+
+                const container = document.getElementById("ingredient-container");
+
+                const row = document.createElement("div");
+
+                row.className = "ingredient-row mb-3";
+
+                row.innerHTML = `
+                                    <div class="row g-2">
+
+                                        <div class="col-md-5">
+                                            <select name="RecipeIngredients[${ingredientIndex}].IngredientId"
+                                                    class="form-select">
+
+                                                <option value="">
+                                                    -- Chọn nguyên liệu --
+                                                </option>
+
+                                                @foreach (var ingredient in Model.Ingredients)
+                                                {
+                                                                            <option value="@ingredient.Id">
+                                                                                                        @ingredient.Name
+                                                                            </option>
+                                                }
+
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <input name="RecipeIngredients[${ingredientIndex}].Quantity"
+                                                   type="number"
+                                                   step="0.01"
+                                                   class="form-control"
+                                                   placeholder="Số lượng" />
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <input name="RecipeIngredients[${ingredientIndex}].Unit"
+                                                   class="form-control"
+                                                   placeholder="Đơn vị" />
+                                        </div>
+
+                                    </div>
+                                `;
+
+                container.appendChild(row);
+
+                ingredientIndex++;
+            });
+    </script>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,21 @@
+# Build output
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Local configuration - contains database password
+**/appsettings.json

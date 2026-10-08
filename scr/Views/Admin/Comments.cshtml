@@ -1,0 +1,76 @@
+@model List<RecipeWebsite.Models.Comment>
+
+@{
+    ViewData["Title"] = "Quản lý bình luận";
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">💬 Quản lý bình luận</h2>
+
+        <a href="/Admin" class="btn btn-secondary">
+            ← Dashboard
+        </a>
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-hover align-middle">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Người dùng</th>
+                    <th>Công thức</th>
+                    <th>Nội dung</th>
+                    <th>Ngày tạo</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var comment in Model)
+                {
+                    <tr>
+                        <td>@comment.Id</td>
+
+                        <td>
+                            @comment.User?.FullName
+                        </td>
+
+                        <td>
+                            @comment.Recipe?.Title
+                        </td>
+
+                        <td>
+                            @comment.Content
+                        </td>
+
+                        <td>
+                            @comment.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                        </td>
+
+                        <td>
+                            <form asp-action="DeleteComment" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+
+                                <input type="hidden" name="id" value="@comment.Id" />
+
+                                <button type="submit" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Bạn có chắc muốn xóa bình luận này không?');">
+                                    Xóa
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

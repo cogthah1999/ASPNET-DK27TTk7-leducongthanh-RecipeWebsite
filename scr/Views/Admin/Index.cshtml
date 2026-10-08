@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-4">
+
+    <h2 class="fw-bold mb-4">
+        🛠️ Admin Dashboard
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>👤 Users</h5>
+                    <h2 class="fw-bold">
+                        @ViewBag.UserCount
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>🍳 Recipes</h5>
+                    <h2 class="fw-bold">
+                        @ViewBag.RecipeCount
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>📂 Categories</h5>
+                    <h2 class="fw-bold">
+                        @ViewBag.CategoryCount
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>💬 Comments</h5>
+                    <h2 class="fw-bold">
+                        @ViewBag.CommentCount
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+
+            <a href="/Admin/Recipes" class="btn btn-primary">
+                🍳 Quản lý công thức
+            </a>
+
+            <a href="/Admin/Categories" class="btn btn-success ms-2">
+                📂 Quản lý danh mục
+            </a>
+
+            <a href="/Admin/Users" class="btn btn-info ms-2">
+                👥 Quản lý người dùng
+            </a>
+
+            <a href="/Admin/Comments" class="btn btn-warning ms-2">
+                💬 Quản lý bình luận
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

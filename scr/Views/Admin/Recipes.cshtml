@@ -1,0 +1,93 @@
+@model List<RecipeWebsite.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Quản lý công thức";
+}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">
+            🍳 Quản lý công thức
+        </h2>
+
+        <a href="/Admin" class="btn btn-secondary">
+            ← Dashboard
+        </a>
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-hover align-middle">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Tên công thức</th>
+                    <th>Danh mục</th>
+                    <th>Thời gian</th>
+                    <th>Khẩu phần</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var recipe in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @recipe.Id
+                        </td>
+
+                        <td>
+                            @recipe.Title
+                        </td>
+
+                        <td>
+                            @recipe.Category?.Name
+                        </td>
+
+                        <td>
+                            @recipe.CookingTime phút
+                        </td>
+
+                        <td>
+                            @recipe.Servings người
+                        </td>
+
+                        <td>
+
+                            <a href="/Recipe/Details/@recipe.Id" class="btn btn-sm btn-info">
+                                Xem
+                            </a>
+
+                            <a href="/Recipe/Edit/@recipe.Id" class="btn btn-sm btn-warning">
+                                Sửa
+                            </a>
+
+                            <form asp-controller="Recipe" asp-action="Delete" method="post" class="d-inline">
+
+                                @Html.AntiForgeryToken()
+
+                                <input type="hidden" name="id" value="@recipe.Id" />
+
+                                <button type="submit" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Bạn có chắc muốn xóa công thức này không?');">
+                                    Xóa
+                                </button>
+                            </form>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
