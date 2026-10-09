@@ -1,6 +1,6 @@
 # WEEK 02 – ASP.NET CONTROLS VÀ XÁC ĐỊNH ĐỀ TÀI
 
-**Thời gian:** 14/09/2026 – 20/09/2026
+**Thời gian:** 13/09/2026 – 16/09/2026
 
 ## 1. Nội dung học tập
 

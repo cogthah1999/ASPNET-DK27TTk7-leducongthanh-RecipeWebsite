@@ -1,6 +1,6 @@
 # WEEK 07 – ÔN TẬP VÀ HOÀN THIỆN ĐỒ ÁN
 
-**Thời gian:** 19/10/2026 – 25/10/2026
+**Thời gian:** 07/10/2026 – 10/10/2026
 
 ## 1. Nội dung học tập
 

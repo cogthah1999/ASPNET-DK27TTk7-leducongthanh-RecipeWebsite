@@ -1,6 +1,6 @@
 # WEEK 03 – QUẢN LÝ TRẠNG THÁI VÀ CÁC ĐỐI TƯỢNG ASP.NET
 
-**Thời gian:** 21/09/2026 – 27/09/2026
+**Thời gian:** 17/09/2026 – 22/09/2026
 
 ## 1. Nội dung học tập
 

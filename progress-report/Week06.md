@@ -1,11 +1,10 @@
 # WEEK 06 – WEB SERVICES VÀ CHUẨN BỊ BÁO CÁO
 
-**Thời gian:** 12/10/2026 – 18/10/2026
+**Thời gian:** 03/10/2026 – 06/10/2026
 
 ## 1. Nội dung học tập
 
 * Bài 7: Sử dụng web services trong ứng dụng ASP.NET.
-* Trao đổi và thảo luận các nội dung liên quan đến bài học.
 * Theo dõi thời điểm mở bài báo cáo: 00:00 ngày 18/10/2026.
 
 ## 2. Công việc thực hiện đồ án

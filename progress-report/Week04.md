@@ -1,6 +1,6 @@
 # WEEK 04 – LÀM VIỆC VỚI CƠ SỞ DỮ LIỆU
 
-**Thời gian:** 28/09/2026 – 04/10/2026
+**Thời gian:** 23/09/2026 – 28/09/2026
 
 ## 1. Nội dung học tập
 

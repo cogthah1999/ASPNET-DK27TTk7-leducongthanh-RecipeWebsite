@@ -1,6 +1,6 @@
 # WEEK 05 – TÌM HIỂU XML VÀ HOÀN THIỆN CHỨC NĂNG
 
-**Thời gian:** 05/10/2026 – 11/10/2026
+**Thời gian:** 29/09/2026 – 02/10/2026
 
 ## 1. Nội dung học tập
 

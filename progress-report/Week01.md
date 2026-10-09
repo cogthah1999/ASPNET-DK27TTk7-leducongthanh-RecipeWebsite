@@ -1,6 +1,6 @@
 # WEEK 01 – GIỚI THIỆU ASP.NET VÀ NGÔN NGỮ C#
 
-**Thời gian:** 07/09/2026 – 13/09/2026
+**Thời gian:** 07/09/2026 – 12/09/2026
 
 ## 1. Nội dung học tập
 
