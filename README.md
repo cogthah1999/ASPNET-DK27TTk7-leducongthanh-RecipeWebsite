@@ -125,7 +125,7 @@ cd ASPNET-DK27Tk7-leducongthanh-RecipeWebsite/scr
 ### Bước 2. Khởi động SQL Server bằng Docker Desktop
 
 1.  Mở Docker Desktop.
-2.  Tìm container SQL Server mà bạn dùng cho dự án.
+2.  Tìm container SQL Server dùng cho dự án.
 3.  Khởi động container và chờ trạng thái chạy ổn định.
 4.  Đảm bảo container ánh xạ cổng `1433` ra máy host, ví dụ `1433:1433`.
 
@@ -201,6 +201,8 @@ Nếu không kết nối được cơ sở dữ liệu, hãy kiểm tra: - Conta
 Server đang chạy. - Cổng `1433` đã được ánh xạ đúng. - Mật khẩu `sa`
 trong chuỗi kết nối đúng với cấu hình container. - Database server có
 thể được truy cập từ máy host.
+
+Một điều lưu ý có thể sữa localhost thay bằng 127.0.0.1 để DOCKER SQL dễ nhận diện hơn.
 
 ## 9. Cấu trúc thư mục
 
