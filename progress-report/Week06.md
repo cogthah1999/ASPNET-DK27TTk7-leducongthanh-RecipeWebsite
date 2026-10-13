@@ -1,33 +1,34 @@
-# WEEK 06 – WEB SERVICES VÀ CHUẨN BỊ BÁO CÁO
+# WEEK 06 – BÁO CÁO TIẾN ĐỘ TUẦN 6
 
-**Thời gian:** 03/10/2026 – 06/10/2026
+**Thời gian:** 12/10/2026 – 18/10/2026  
+**Ngày cập nhật:** 12/10/2026  
+**Đề tài:** Website chia sẻ công thức nấu ăn (RecipeWebsite)  
 
-## 1. Nội dung học tập
+## 1. Mục tiêu
 
-* Bài 7: Sử dụng web services trong ứng dụng ASP.NET.
-* Theo dõi thời điểm mở bài báo cáo: 00:00 ngày 18/10/2026.
+* Rà soát mã nguồn và tài liệu đã hoàn thành qua 5 tuần trước.
+* Thống nhất nội dung báo cáo Word, PDF và báo cáo tiến độ với chức năng thực tế.
+* Chuẩn bị hồ sơ sẵn sàng nộp khi hệ thống mở nhận bài ngày 18/10/2026.
 
-## 2. Công việc thực hiện đồ án
+## 2. Tiến độ đến ngày 12/10/2026
 
-* Hoàn thiện chức năng bình luận trên công thức.
-* Hoàn thiện các chức năng quản trị danh mục, công thức, người dùng và bình luận.
-* Kiểm tra việc phân quyền giữa khách truy cập, người dùng và quản trị viên.
-* Bổ sung kiểm tra dữ liệu đầu vào và các trường hợp truy cập không hợp lệ.
-* Tiếp tục hoàn thiện nội dung báo cáo, sơ đồ thiết kế và hình ảnh giao diện.
+* Đã xây dựng các chức năng chính: xem danh sách và chi tiết công thức, tìm kiếm và lọc, thêm/sửa/xóa công thức, tài khoản người dùng, bình luận và quản trị.
+* Đã tổ chức mã nguồn ASP.NET Core MVC, cơ sở dữ liệu SQL Server/Entity Framework Core và tài liệu README.
+* Đã có báo cáo đồ án ở định dạng Word và PDF, cùng các báo cáo tiến độ Week01–Week05.
+* Đang rà soát sự thống nhất về nội dung, cách trình bày và thời điểm báo cáo.
 
-## 3. Kết quả đạt được
+## 3. Kế hoạch từ 13/10 đến 18/10/2026
 
-* Các chức năng bình luận và quản trị được hoàn thiện trong phạm vi hệ thống.
-* Quyền truy cập được kiểm tra theo vai trò người dùng.
-* Báo cáo đồ án được bổ sung nội dung về thiết kế, hiện thực và kiểm thử.
+* Kiểm tra lại thao tác khởi động ứng dụng, kết nối SQL Server và các chức năng chính.
+* Kiểm tra trạng thái lời mời Collaborator dành cho giảng viên hướng dẫn trên GitHub.
+* Kiểm tra file cấu hình mẫu, bảo đảm không đưa mật khẩu thực vào repository.
+* Hoàn thiện báo cáo Word, xuất lại PDF, kiểm tra mục lục/hình ảnh/số trang nếu có thay đổi bố cục.
+* Kiểm tra các tệp cần nộp và nộp bài trong thời gian hệ thống cho phép.
 
-## 4. Khó khăn và cách xử lý
+## 4. Công việc xác nhận hoàn tất
 
-Trong quá trình kiểm thử, cần bảo đảm người dùng không thể thực hiện các thao tác vượt quá quyền được cấp. Các điều kiện kiểm tra đăng nhập, vai trò và quyền sở hữu dữ liệu được rà soát tại những chức năng tương ứng.
+* Kiểm thử từ bản clone sạch trên môi trường độc lập.
+* Xác nhận giảng viên đã chấp nhận lời mời cộng tác GitHub.
+* Hoàn tất nộp bản cuối cùng trên hệ thống môn học.
 
-## 5. Kế hoạch tuần tiếp theo
 
-* Rà soát toàn bộ chức năng.
-* Kiểm tra tính toàn vẹn dữ liệu và các trường hợp lỗi.
-* Hoàn thiện báo cáo, hướng dẫn cài đặt và cấu trúc hồ sơ nộp.
-* Chuẩn bị nộp bài trước thời hạn của môn học.
