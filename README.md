@@ -261,3 +261,10 @@ Các tính năng nêu trên là hướng phát triển, không được xem là 
 -   **Công nghệ chính:** ASP.NET Core MVC, C#, Entity Framework Core và
     SQL Server
 -   **Tác giả:** Lê Đức Công Thành
+
+## 13. Video demo đồ án
+
+- Video thuyết trình và demo:
+  https://bom.so/IzXAh8
+
+- Công nghệ: ASP.NET Core MVC, EF Core, SQL Server.
